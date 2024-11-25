@@ -224,6 +224,10 @@ body {
   width: 100%;
 }
 
+header:not(.header.menu-responsive) ul.container-navbar li.lang-container {
+  padding: 0 10px;
+}
+
 .lang-text {
   display: inline-block;
   width: 100%;
