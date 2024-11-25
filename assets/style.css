@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* ################################################### */
+/* -------------------- INIT FONT -------------------- */
+/* ################################################### */
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* ################################################### */
+/* ------------------ RESET STYLES ------------------ */
+/* ################################################### */
 
 *,
 ::after,
@@ -15,7 +23,10 @@
   -ms-user-select: none;
   user-select: none;
   scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
   font-family: var(--main-font);
+  /* outline: 1px solid red; */
 }
 
 :focus {
@@ -26,9 +37,19 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* ################################################### */
+/* -------------------- INIT VAR -------------------- */
+/* ################################################### */
+
 :root {
-    --main-font: "Kanit", sans-serif;
+  --main-font: "Kanit", sans-serif;
+  --blue: #4dafdc;
+  --dark-blue: #0e1a28;
 }
+
+/* ################################################### */
+/* ---------------------- BODY ---------------------- */
+/* ################################################### */
 
 body {
   height: 100vh;
@@ -39,16 +60,497 @@ body {
   overflow: hidden;
 }
 
+/* ################################################### */
+/* ------------------- TRANSITIONS ------------------- */
+/* ################################################### */
+
+/* @-webkit-keyframes fipatech{
+}
+
+@keyframes fipatech{
+} */
+
+/* ################################################### */
+/* ----------------- MAIN CONTAINER ----------------- */
+/* ################################################### */
+
+.container-main {
+  width: 100vw;
+  padding: 0 40px;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
 .container-main,
 .container-main .landing-page {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.container-main {
+  width: 100vw;
+  padding: 0 40px;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.container-main .landing-page {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container-main .landing-page header,
+.container-main .landing-page header nav.menu-normal,
+.container-main .landing-page header nav .container-navbar {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+}
+
+.container-main .landing-page header:not(.menu-responsive),
+.container-main .landing-page header:not(.menu-responsive) nav.menu-normal,
+.container-main
+  .landing-page
+  header:not(.menu-responsive)
+  nav
+  .container-navbar {
+  width: auto;
+}
+
+.container-main .landing-page header {
+  height: 80px;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* ################################################### */
+/* --------------------- MENU PC --------------------- */
+/* ################################################### */
+
+.container-main .landing-page header:not(.menu-responsive) nav,
+.container-main
+  .landing-page
+  header:not(.menu-responsive)
+  nav
+  .container-navbar {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.container-main .landing-page header nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.container-main .landing-page header:not(.menu-responsive) nav ul {
+  flex-direction: row;
+}
+
+.container-main .landing-page header:not(.menu-responsive) nav ul.left-nav,
+.container-main .landing-page header:not(.menu-responsive) nav ul.right-nav {
+  gap: 50px;
+}
+
+.container-main .landing-page header:not(.menu-responsive) nav a,
+.container-main .landing-page header:not(.menu-responsive) nav ul li {
+  color: var(--white);
+}
+
+.container-main .landing-page header nav ul li {
+  font-family: var(--normal-font);
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.container-main .landing-page header:not(.menu-responsive) nav ul li {
+  font-size: 16px;
+}
+
+.container-main .landing-page header:not(.menu-responsive) nav img.logo {
+  /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+  cursor: pointer;
+  width: 80px;
+}
+
+.container-main .landing-page header.menu-responsive nav a.logo {
+  display: none;
+}
+
+.container-main .landing-page header:not(.menu-responsive) nav ul.lang-nav {
+  position: absolute;
+  right: 40px;
+  gap: 10px;
+}
+
+.container-main .landing-page header nav ul.lang-nav li:not(.active) a {
+  color: #ababa4;
+}
+
+/* ################################################### */
+/* ---------------- CHANGEMENT LANGUE ---------------- */
+/* ################################################### */
+
+.lang-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 12px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.lang-text {
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  text-align: center;
+}
+
+.lang-fr {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.lang-en {
+  transform: translateY(100%);
+  opacity: 0;
+  position: absolute;
+}
+
+/* ################################################### */
+/* ----------------- MENU RESPONSIVE ----------------- */
+/* ################################################### */
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+header.menu-responsive .menu-icon:checked + label,
+header.menu-responsive .menu-icon:not(:checked) + label {
+  position: fixed;
+  top: 50px;
+  right: 45px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+header.menu-responsive .menu-icon:checked + label:before,
+header.menu-responsive .menu-icon:not(:checked) + label:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 20px;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  border-top: 3px solid #ececee;
+  border-bottom: 3px solid #ececee;
+  transition: border-width 100ms 1500ms ease,
+    top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+    height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 200ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+header.menu-responsive .menu-icon:checked + label:after,
+header.menu-responsive .menu-icon:not(:checked) + label:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  z-index: 20;
+  top: 10px;
+  background-color: #ececee;
+  margin-top: -1px;
+  transition: width 100ms 1750ms ease, right 100ms 1750ms ease,
+    margin-top 100ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+header.menu-responsive .menu-icon:checked + label:before {
+  top: 11px;
+  transform: rotate(45deg);
+  height: 3px;
+  background-color: #ececee;
+  border-width: 0;
+  transition: border-width 100ms 340ms ease,
+    top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 200ms 500ms ease,
+    transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+header.menu-responsive .menu-icon:checked + label:after {
+  width: 30px;
+  margin-top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+  transition: width 100ms ease, right 100ms ease, margin-top 100ms 500ms ease,
+    transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+nav.menu-responsive {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+  overflow: hidden;
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+  background-color: var(--dark-blue);
+  animation: border-transform 7s linear infinite;
+  transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
+    right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 250ms 1100ms ease,
+    width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1),
+    height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes border-transform {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+header.menu-responsive .menu-icon:checked ~ nav.menu-responsive {
+  animation-play-state: paused;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 200%;
+  height: 200%;
+  transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
+    right 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1), transform 250ms 700ms ease,
+    width 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
+    height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+nav.menu-responsive ul:not(.lang-nav) {
+  flex-direction: column;
+}
+
+nav.menu-responsive ul.lang-nav {
+  gap: 50px;
+}
+
+nav.menu-responsive ul.container-navbar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  text-align: center;
+  transform: translateY(-50%);
+  list-style: none;
+}
+
+nav.menu-responsive ul li {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+  list-style: none;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 250ms linear;
+}
+
+nav.menu-responsive ul.left-nav li.lang-container:nth-child(1) {
+  transition-delay: 200ms;
+}
+nav.menu-responsive ul.left-nav li.lang-container:nth-child(2) {
+  transition-delay: 150ms;
+}
+nav.menu-responsive ul.right-nav li.lang-container:nth-child(1) {
+  transition-delay: 100ms;
+}
+nav.menu-responsive ul.right-nav li.lang-container:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+nav.menu-responsive ul li a {
+  font-family: var(--font-family-am);
+  font-size: 6vh;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2;
+  font-weight: 800;
+  position: relative;
+  color: #ececee;
+  transition: all 250ms linear;
+}
+
+nav.menu-responsive ul.lang-nav li a {
+  font-size: 4vh;
+}
+
+header.menu-responsive nav.menu-responsive .lang-container {
+  height: 6vh;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+header.menu-responsive nav.menu-responsive .logo {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.03;
+  height: 100%;
+}
+
+header.menu-responsive nav.menu-responsive .lang-container .lang-en {
+  transform: translateY(0);
+}
+
+nav.menu-responsive ul li.lang-container a {
+  width: auto;
+}
+
+nav.menu-responsive ul li.lang-container a:hover {
+  text-decoration: none;
+  color: var(--blue);
+  text-shadow: 1px 1px 0 var(--dark-blue), -1px -1px 0 var(--dark-blue),
+    1px -1px 0 var(--dark-blue), -1px 1px 0 var(--dark-blue),
+    1px 1px 0 var(--dark-blue);
+  letter-spacing: 2px;
+}
+
+nav.menu-responsive ul li.lang-container a:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  content: "";
+  height: 2vh;
+  margin-top: -1vh;
+  width: 0;
+  left: 0;
+  background-color: #e0e6e6;
+  opacity: 0.8;
+  transition: width 250ms linear;
+}
+
+nav.menu-responsive ul li.lang-container a:hover:after {
+  width: 100%;
+}
+
+header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 350ms ease, transform 250ms ease;
+}
+
+.menu-icon:checked
+  ~ nav.menu-responsive
+  ul.left-nav
+  li.lang-container:nth-child(1) {
+  transition-delay: 1400ms;
+}
+.menu-icon:checked
+  ~ nav.menu-responsive
+  ul.left-nav
+  li.lang-container:nth-child(2) {
+  transition-delay: 1480ms;
+}
+.menu-icon:checked
+  ~ nav.menu-responsive
+  ul.left-nav
+  li.lang-container:nth-child(3) {
+  transition-delay: 1560ms;
+}
+.menu-icon:checked
+  ~ nav.menu-responsive
+  ul.right-nav
+  li.lang-container:nth-child(1) {
+  transition-delay: 1640ms;
+}
+.menu-icon:checked
+  ~ nav.menu-responsive
+  ul.right-nav
+  li.lang-container:nth-child(2) {
+  transition-delay: 1720ms;
+}
+.menu-icon:checked
+  ~ nav.menu-responsive
+  ul.right-nav
+  li.lang-container:nth-child(3) {
+  transition-delay: 1800ms;
+}
+
+.menu-icon:checked ~ nav.menu-responsive ul.lang-nav li:nth-child(1),
+.menu-icon:checked ~ nav.menu-responsive ul.lang-nav li:nth-child(2) {
+  transition-delay: 1880ms;
 }
 
 .container-main .landing-page .hero-section {
@@ -57,11 +559,4 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-.container-main .landing-page .hero-section .responsive-image {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  width: auto;
 }
