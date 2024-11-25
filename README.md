@@ -49,11 +49,11 @@ Une fois les droits récupérés, suivez l'installation puis ouvrez un terminal 
 git switch dev
 ```
 
-> Note: Merci de développer sur la branche `dev` ou de créer une branche `dev + prénom`
+> Note: Merci de développer sur la branche `dev` ou de créer une branche `dev-{prénom}`
 
 ## Nous contacter
 
-Pour toute question, n'hésitez surtout pas à nous contacgter
+Pour toute question, n'hésitez surtout pas à nous contacter
 
 | Rôle        | E-Mail                                                                                 |
 | ----------- | -------------------------------------------------------------------------------------- |
