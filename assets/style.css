@@ -53,12 +53,9 @@ body::-webkit-scrollbar {
 /* ################################################### */
 
 body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7fafb;
-  overflow: hidden;
 }
 
 /* ################################################### */
@@ -71,6 +68,24 @@ body {
 @keyframes fipatech{
 } */
 
+@-webkit-keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* ################################################### */
 /* ----------------- MAIN CONTAINER ----------------- */
 /* ################################################### */
@@ -82,6 +97,7 @@ body {
   top: 0;
   left: 0;
   position: absolute;
+  overflow: hidden;
 }
 
 .container-main,
@@ -558,6 +574,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   transition-delay: 1880ms;
 }
 
+/* ################################################### */
+/* ------------------ HERO SECTION ------------------ */
+/* ################################################### */
+
 .container-main .landing-page .hero-section {
   display: flex;
   flex-direction: column;
@@ -570,6 +590,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   top: 0;
   position: absolute;
   background: url("../src/background.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .container-main .landing-page .hero-section::before {
@@ -598,7 +619,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 
 .container-main .landing-page .hero-section .headline-hero-section {
   color: #fff;
-  font-size: 60px;
+  font-size: 3.7em;
   width: 60%;
   text-align: center;
   z-index: 2;
@@ -652,5 +673,208 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   color: var(--dark-blue);
   font-size: 19px;
   padding: 8px 20px;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+
+.container-main .landing-page .hero-section .cta-button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+
+/* ################################################### */
+/* ------------ MISE EN PAGE DES SECTIONS ------------ */
+/* ################################################### */
+
+.container-main .project-page,
+.container-main .members-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+  position: relative;
+}
+
+/* ################################################### */
+/* ------- MISE EN PAGE DES "HEADERS" SECTIONS ------- */
+/* ################################################### */
+
+.container-main .category-section {
+  margin-top: 30px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  position: relative;
+  font-weight: 500;
+}
+
+.container-main .category-section::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  background-color: #4dafdc;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.container-main .headline-section {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.container-main .desc-section {
+  font-weight: 200;
+  color: #949494;
+  width: 60%;
+  text-align: center;
+}
+
+/* ################################################### */
+/* ----------------- MEMBERS SECTION ----------------- */
+/* ################################################### */
+
+.container-main .members-page .carousel {
+  width: auto;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  overflow: hidden;
+  margin-top: 50px;
+  /* animation: scroll-left 60s linear infinite; */
+}
+
+.container-main .members-page .carousel .carousel-item {
+  aspect-ratio: 4/5;
+  width: calc(100% / 4);
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.container-main .members-page .carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 40%;
+  border-radius: 20px;
+  filter: grayscale(1);
+  transition: .2s all ease-in-out;
+}
+
+.container-main .members-page .carousel .carousel-item img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.container-main .members-page .carousel .box-carousel-item {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  gap: 2px;
+}
+
+.container-main .members-page .carousel .box-carousel-item p {
+  font-size: 18px;
+}
+
+.container-main .members-page .carousel .box-carousel-item span {
+  color: #656565;
+}
+
+/* ################################################### */
+/* --------------------- FOOTER ---------------------- */
+/* ################################################### */
+
+footer {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  background-color: var(--dark-blue);
+  padding: 40px;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  gap: 20px;
+}
+
+footer p {
+  color: #fff;
+}
+
+footer .top-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+footer .top-footer img {
+  width: 40px;
+}
+
+footer .top-footer p {
+  font-size: 18px;
+}
+
+footer .legal-terms-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+footer .legal-terms-footer .links-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+footer .legal-terms-footer .links-footer a,
+footer .legal-terms-footer .credits-footer {
+  color: #ecebeb;
+  font-weight: 300;
+}
+
+footer .legal-terms-footer .links-footer a {
   cursor: pointer;
 }

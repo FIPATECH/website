@@ -1,1 +1,3 @@
 *.txt
+src/portraits/*
+*.DS_Store

@@ -109,6 +109,34 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
 
+    const carousel = document.getElementById('carousel');
+    const items = Array.from(carousel.children);
+
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        carousel.appendChild(clone);
+    });
+
+    let scrollAmount = 0;
+
+    const startCarousel = () => {
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(carousel).gap) || 0;
+
+        setInterval(() => {
+            scrollAmount += 1;
+
+            if (scrollAmount >= itemWidth + gap) {
+                scrollAmount = 0;
+
+                carousel.appendChild(carousel.firstElementChild);
+            }
+
+            carousel.style.transform = `translateX(${-scrollAmount}px)`;
+        }, 16);
+    };
+
+    startCarousel();
     updateNavbar();
     initLanguageSwitcher();
     updateTitleNavbarContainerLinks();
