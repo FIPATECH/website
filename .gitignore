@@ -1,3 +1,4 @@
 *.txt
-src/portraits/*
 *.DS_Store
+# src/portraits/*
+# src/sponsors/*
