@@ -100,6 +100,18 @@ body {
   overflow: hidden;
 }
 
+@media only screen and (max-width:991px) {
+  .container-main {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .container-main {
+    padding: 0 10px;
+  }
+}
+
 .container-main,
 .container-main .landing-page {
   min-height: 100vh;
@@ -658,6 +670,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   color: var(--blue);
 }
 
+.container-main .landing-page .hero-section .boxs-advantages .child-box-advantage .lang-container {
+  height: auto;
+}
+
 .container-main .landing-page .hero-section .desc-hero-section {
   color: #c2c2c2;
   width: 50%;
@@ -670,23 +686,34 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   z-index: 2;
   background-color: var(--blue);
   border-radius: 15px;
-  color: var(--dark-blue);
   font-size: 19px;
   padding: 8px 20px;
   cursor: pointer;
   transition: .3s all ease-in-out;
 }
 
+.container-main .landing-page .hero-section .cta-button .lang-container {
+  height: auto;
+}
+
+.container-main .landing-page .hero-section .cta-button a {
+  color: var(--dark-blue);
+  transition: .3s all ease-in-out;
+}
+
 .container-main .landing-page .hero-section .cta-button:hover {
-  color: #ffffff;
   transform: scale(1.1);
+}
+
+.container-main .landing-page .hero-section .cta-button:hover a {
+  color: #ffffff;
 }
 
 .container-main .landing-page .hero-section .banner-sponsors {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: 2;
   height: 60px;
   width: auto;
   display: flex;
@@ -715,12 +742,35 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   height: 30px;
 }
 
+@media only screen and (max-width:991px) {
+  .container-main .landing-page .hero-section .headline-hero-section {
+    width: 80%;
+  }
+  .container-main .landing-page .hero-section .desc-hero-section {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .container-main .landing-page .hero-section .headline-hero-section {
+    width: 90%;
+  }
+  .container-main .landing-page .hero-section .headline-hero-section {
+    font-size: 2.5em;
+  }
+  .container-main .landing-page .hero-section .desc-hero-section {
+    width: 90%;
+  }
+}
+
 /* ################################################### */
 /* ------------ MISE EN PAGE DES SECTIONS ------------ */
 /* ################################################### */
 
 .container-main .project-page,
-.container-main .members-page {
+.container-main .members-page,
+.container-main .gallery-page,
+.container-main .contact-page {
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
@@ -761,6 +811,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 .container-main .headline-section {
   margin-top: 10px;
   font-size: 30px;
+  text-align: center;
 }
 
 .container-main .desc-section {
@@ -768,6 +819,22 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   color: #949494;
   width: 60%;
   text-align: center;
+}
+
+@media only screen and (max-width:991px) {
+  .container-main .desc-section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .container-main .headline-section {
+    font-size: 24px;
+}
+  .container-main .desc-section {
+    font-size: 14px;
+    text-align: justify;
+  }
 }
 
 /* ################################################### */
@@ -839,6 +906,58 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   color: #656565;
 }
 
+@media only screen and (max-width:767px) {
+  .container-main .members-page .carousel {
+    margin-top: 30px;
+  }
+}
+
+/* ################################################### */
+/* ----------------- GALLERY SECTION ----------------- */
+/* ################################################### */
+
+.container-main .gallery-page {
+  background-color: var(--blue);
+}
+
+.container-main .gallery-page::before,
+.container-main .gallery-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: var(--blue);
+  z-index: 1;
+}
+
+.container-main .gallery-page::before {
+  left: -40px;
+}
+
+.container-main .gallery-page::after {
+  right: -40px;
+}
+
+.container-main .gallery-page svg {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: calc(100% + 80px);
+  z-index: 2;
+}
+
+/* ################################################### */
+/* ----------------- CONTACT SECTION ----------------- */
+/* ################################################### */
+
+.container-main .contact-page svg {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: calc(100% + 80px);
+}
+
 /* ################################################### */
 /* --------------------- FOOTER ---------------------- */
 /* ################################################### */
@@ -901,6 +1020,16 @@ footer .legal-terms-footer .links-footer {
   gap: 10px;
 }
 
+footer .legal-terms-footer .links-footer .lang-container {
+  height: auto;
+  width: auto;
+}
+
+footer .legal-terms-footer .links-footer .lang-container a {
+  white-space : nowrap;
+  text-align: left;
+}
+
 footer .legal-terms-footer .links-footer a,
 footer .legal-terms-footer .credits-footer {
   color: #ecebeb;
@@ -909,4 +1038,17 @@ footer .legal-terms-footer .credits-footer {
 
 footer .legal-terms-footer .links-footer a {
   cursor: pointer;
+}
+
+@media only screen and (max-width:767px) {
+  footer .legal-terms-footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .legal-terms-footer .links-footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
 }
