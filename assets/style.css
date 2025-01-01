@@ -683,9 +683,19 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   font-weight: 300;
 }
 
-.container-main .landing-page .hero-section .cta-button {
+.container-main .landing-page .hero-section .buttons-cta {
   z-index: 2;
-  background-color: var(--blue-darken);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.container-main .landing-page .hero-section .cta-button,
+.container-main .landing-page .hero-section .cta-button-secondary {
   border-radius: 15px;
   font-size: 19px;
   padding: 8px 20px;
@@ -693,21 +703,46 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   transition: .3s all ease-in-out;
 }
 
-.container-main .landing-page .hero-section .cta-button .lang-container {
+.container-main .landing-page .hero-section .cta-button {
+  background-color: var(--blue-darken);
+  border: 1px solid var(--blue-darken);
+}
+
+.container-main .landing-page .hero-section .cta-button-secondary {
+  background-color: #ffffff00;
+  border: 1px solid var(--blue-darken);
+}
+
+.container-main .landing-page .hero-section .buttons-cta .lang-container {
   height: auto;
 }
 
-.container-main .landing-page .hero-section .cta-button a {
+.container-main .landing-page .hero-section .cta-button a,
+.container-main .landing-page .hero-section .cta-button-secondary a {
   color: #fff;
   transition: .3s all ease-in-out;
 }
 
-.container-main .landing-page .hero-section .cta-button:hover {
+.container-main .landing-page .hero-section .cta-button:hover,
+.container-main .landing-page .hero-section .cta-button-secondary:hover {
   transform: scale(1.1);
+}
+
+.container-main .landing-page .hero-section .cta-button:hover {
   background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.container-main .landing-page .hero-section .cta-button-secondary:hover {
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
 .container-main .landing-page .hero-section .cta-button:hover a {
+  color: var(--blue-darken);
+}
+
+.container-main .landing-page .hero-section .cta-button-secondary:hover a {
   color: var(--blue-darken);
 }
 
@@ -762,6 +797,13 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   }
   .container-main .landing-page .hero-section .desc-hero-section {
     width: 90%;
+  }
+  .container-main .landing-page .hero-section .buttons-cta {
+    flex-direction: column;
+    width: 90%;
+  }
+  .container-main .landing-page .hero-section .buttons-cta > * {
+    width: 100%;
   }
 }
 
