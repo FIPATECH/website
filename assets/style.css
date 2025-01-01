@@ -826,6 +826,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   align-content: center;
   gap: 5px;
   position: relative;
+  padding: 30px 0;
 }
 
 /* ################################################### */
@@ -833,7 +834,6 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 /* ################################################### */
 
 .container-main .category-section {
-  margin-top: 30px;
   text-transform: uppercase;
   color: var(--dark-blue);
   position: relative;
@@ -879,6 +879,76 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
     font-size: 14px;
     text-align: justify;
   }
+}
+
+/* ################################################### */
+/* ----------------- PROJECT SECTION ----------------- */
+/* ################################################### */
+
+.container-main .project-page {
+  height: 100vh;
+}
+
+.container-main .project-page .project-section {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.container-main .project-page .project-section > * {
+  border-radius: 20px;
+  position: relative;
+  background-color: red;
+}
+
+.container-main .project-page .project-section .project-bloc-pseudo-element {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: 0;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;
+  border-radius: 22px;
+}
+
+.container-main .project-page .project-section .project-bloc-content {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+  border-radius: 20px;
+}
+
+.container-main .project-page .project-section .project-bloc1 {
+  grid-area: 1 / 1 / 4 / 3;
+}
+
+.container-main .project-page .project-section .project-bloc2 {
+  grid-area: 1 / 3 / 3 / 5;
+}
+
+.container-main .project-page .project-section .project-bloc3 {
+  grid-area: 3 / 3 / 4 / 5;
+}
+
+.container-main .project-page .project-section .project-bloc4 {
+  grid-area: 1 / 5 / 5 / 7;
+}
+
+.container-main .project-page .project-section .project-bloc5 {
+  grid-area: 4 / 1 / 7 / 5;
+}
+
+.container-main .project-page .project-section .project-bloc6 {
+  grid-area: 5 / 5 / 7 / 7;
 }
 
 /* ################################################### */
