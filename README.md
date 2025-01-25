@@ -1,10 +1,10 @@
-# FIPATech
+# FIPATECH
 
-Site internet de FIPATech, une équipe de robotique de l'ENSTA Bretagne composée d'étudiants par alternance.
+Site internet de FIPATECH, une équipe de robotique de l'ENSTA Bretagne composée d'étudiants par alternance.
 
 ## Lien du site internet
 
-[FIPATech -- ENSTA Bretagne](https://www.ensta-bretagne.fr/fipatech)
+[FIPATECH -- ENSTA Bretagne](https://www.ensta-bretagne.fr/fipatech)
 
 ## Fonctionnalités
 
@@ -18,7 +18,7 @@ Site internet de FIPATech, une équipe de robotique de l'ENSTA Bretagne composé
 
 ## Tech
 
-FIPATech utilise ces "langages" pour fonctionner :
+FIPATECH utilise ces "langages" pour fonctionner :
 
 - [HTML] - Hypertext Markup Language
 - [CSS] - Cascading Style Sheets
@@ -34,7 +34,7 @@ cd website
 
 ## Plugins
 
-Le site de FIPATech utilise actuellement ces plugins.
+Le site de FIPATECH utilise actuellement ces plugins.
 | Plugins | Documentations |
 | ------ | ------ |
 | GitHub | [GitHub] -- _GitHub Docs_ |

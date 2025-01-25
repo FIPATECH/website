@@ -101,13 +101,13 @@ body {
   overflow: hidden;
 }
 
-@media only screen and (max-width:991px) {
+@media only screen and (max-width: 991px) {
   .container-main {
     padding: 0 20px;
   }
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   .container-main {
     padding: 0 10px;
   }
@@ -151,11 +151,7 @@ body {
 
 .container-main .landing-page header:not(.menu-responsive),
 .container-main .landing-page header:not(.menu-responsive) nav.menu-normal,
-.container-main
-  .landing-page
-  header:not(.menu-responsive)
-  nav
-  .container-navbar {
+.container-main .landing-page header:not(.menu-responsive) nav .container-navbar {
   width: auto;
 }
 
@@ -171,11 +167,7 @@ body {
 /* ################################################### */
 
 .container-main .landing-page header:not(.menu-responsive) nav,
-.container-main
-  .landing-page
-  header:not(.menu-responsive)
-  nav
-  .container-navbar {
+.container-main .landing-page header:not(.menu-responsive) nav .container-navbar {
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
@@ -312,10 +304,9 @@ header.menu-responsive .menu-icon:not(:checked) + label:before {
   left: 0;
   border-top: 3px solid #ececee;
   border-bottom: 3px solid #ececee;
-  transition: border-width 100ms 1500ms ease,
-    top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
-    height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
-    background-color 200ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: border-width 100ms 1500ms ease, top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+    height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1), background-color 200ms ease,
+    transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 header.menu-responsive .menu-icon:checked + label:after,
@@ -329,8 +320,8 @@ header.menu-responsive .menu-icon:not(:checked) + label:after {
   top: 10px;
   background-color: #ececee;
   margin-top: -1px;
-  transition: width 100ms 1750ms ease, right 100ms 1750ms ease,
-    margin-top 100ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: width 100ms 1750ms ease, right 100ms 1750ms ease, margin-top 100ms ease,
+    transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 header.menu-responsive .menu-icon:checked + label:before {
@@ -339,10 +330,8 @@ header.menu-responsive .menu-icon:checked + label:before {
   height: 3px;
   background-color: #ececee;
   border-width: 0;
-  transition: border-width 100ms 340ms ease,
-    top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
-    height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
-    background-color 200ms 500ms ease,
+  transition: border-width 100ms 340ms ease, top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1), background-color 200ms 500ms ease,
     transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -370,8 +359,7 @@ nav.menu-responsive {
   background-color: var(--dark-blue);
   animation: border-transform 7s linear infinite;
   transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
-    right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
-    transform 250ms 1100ms ease,
+    right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1), transform 250ms 1100ms ease,
     width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1),
     height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -513,9 +501,8 @@ nav.menu-responsive ul li.lang-container a {
 nav.menu-responsive ul li.lang-container a:hover {
   text-decoration: none;
   color: var(--blue);
-  text-shadow: 1px 1px 0 var(--dark-blue), -1px -1px 0 var(--dark-blue),
-    1px -1px 0 var(--dark-blue), -1px 1px 0 var(--dark-blue),
-    1px 1px 0 var(--dark-blue);
+  text-shadow: 1px 1px 0 var(--dark-blue), -1px -1px 0 var(--dark-blue), 1px -1px 0 var(--dark-blue),
+    -1px 1px 0 var(--dark-blue), 1px 1px 0 var(--dark-blue);
   letter-spacing: 2px;
 }
 
@@ -545,40 +532,22 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   transition: opacity 350ms ease, transform 250ms ease;
 }
 
-.menu-icon:checked
-  ~ nav.menu-responsive
-  ul.left-nav
-  li.lang-container:nth-child(1) {
+.menu-icon:checked ~ nav.menu-responsive ul.left-nav li.lang-container:nth-child(1) {
   transition-delay: 1400ms;
 }
-.menu-icon:checked
-  ~ nav.menu-responsive
-  ul.left-nav
-  li.lang-container:nth-child(2) {
+.menu-icon:checked ~ nav.menu-responsive ul.left-nav li.lang-container:nth-child(2) {
   transition-delay: 1480ms;
 }
-.menu-icon:checked
-  ~ nav.menu-responsive
-  ul.left-nav
-  li.lang-container:nth-child(3) {
+.menu-icon:checked ~ nav.menu-responsive ul.left-nav li.lang-container:nth-child(3) {
   transition-delay: 1560ms;
 }
-.menu-icon:checked
-  ~ nav.menu-responsive
-  ul.right-nav
-  li.lang-container:nth-child(1) {
+.menu-icon:checked ~ nav.menu-responsive ul.right-nav li.lang-container:nth-child(1) {
   transition-delay: 1640ms;
 }
-.menu-icon:checked
-  ~ nav.menu-responsive
-  ul.right-nav
-  li.lang-container:nth-child(2) {
+.menu-icon:checked ~ nav.menu-responsive ul.right-nav li.lang-container:nth-child(2) {
   transition-delay: 1720ms;
 }
-.menu-icon:checked
-  ~ nav.menu-responsive
-  ul.right-nav
-  li.lang-container:nth-child(3) {
+.menu-icon:checked ~ nav.menu-responsive ul.right-nav li.lang-container:nth-child(3) {
   transition-delay: 1800ms;
 }
 
@@ -597,7 +566,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 20px ;
+  gap: 20px;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -622,10 +591,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   z-index: 2;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-  border: 1px solid rgba(255, 255, 255, 0.2); 
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  padding: 5px 15px; 
+  padding: 5px 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -660,10 +629,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   gap: 5px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-  border: 1px solid rgba(255, 255, 255, 0.2); 
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  padding: 2px 10px; 
+  padding: 2px 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -676,7 +645,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .landing-page .hero-section .desc-hero-section {
-  color: #c2c2c2;
+  color: white;
   width: 50%;
   text-align: center;
   z-index: 2;
@@ -700,7 +669,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   font-size: 19px;
   padding: 8px 20px;
   cursor: pointer;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .container-main .landing-page .hero-section .cta-button {
@@ -720,7 +689,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 .container-main .landing-page .hero-section .cta-button a,
 .container-main .landing-page .hero-section .cta-button-secondary a {
   color: #fff;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .container-main .landing-page .hero-section .cta-button:hover,
@@ -779,7 +748,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   height: 30px;
 }
 
-@media only screen and (max-width:991px) {
+@media only screen and (max-width: 991px) {
   .container-main .landing-page .hero-section .headline-hero-section {
     width: 80%;
   }
@@ -788,7 +757,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   }
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   .container-main .landing-page .hero-section .headline-hero-section {
     width: 90%;
   }
@@ -840,6 +809,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   font-weight: 500;
 }
 
+#team {
+  color: white;
+}
+
 .container-main .category-section::after {
   content: "";
   display: block;
@@ -860,21 +833,21 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 
 .container-main .desc-section {
   font-weight: 200;
-  color: #949494;
   width: 60%;
   text-align: center;
+  padding-bottom: 10px;
 }
 
-@media only screen and (max-width:991px) {
+@media only screen and (max-width: 991px) {
   .container-main .desc-section {
     width: 100%;
   }
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   .container-main .headline-section {
     font-size: 24px;
-}
+  }
   .container-main .desc-section {
     font-size: 14px;
     text-align: justify;
@@ -904,7 +877,6 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 .container-main .project-page .project-section > * {
   border-radius: 20px;
   position: relative;
-  background-color: red;
 }
 
 .container-main .project-page .project-section .project-bloc-pseudo-element {
@@ -914,7 +886,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   z-index: 0;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   border-radius: 22px;
 }
 
@@ -951,13 +923,158 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   grid-area: 5 / 5 / 7 / 7;
 }
 
+.project-section {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-left: 220px;
+  padding-right: 220px;
+}
+
+.project-section > div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-bloc2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  height: 100%;
+}
+
+.project-bloc2 h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-bloc2 ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.project-bloc2 ul li {
+  margin-bottom: 8px;
+}
+
+.project-bloc3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  height: 100%;
+}
+
+.project-bloc3 h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-bloc3 ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.project-bloc3 ul li {
+  margin-bottom: 8px;
+}
+
+.project-bloc5 {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-bloc5 h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-bloc5 p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.project-bloc6 {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-bloc6 h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-bloc6 p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
 /* ################################################### */
 /* ----------------- MEMBERS SECTION ----------------- */
 /* ################################################### */
 
 .container-main .members-page .carousel {
+  color: white;
   width: auto;
-  height: 600px;
+  height: 450px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -986,7 +1103,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   object-position: 40%;
   border-radius: 20px;
   filter: grayscale(1);
-  transition: .2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .container-main .members-page .carousel .carousel-item img:hover {
@@ -1001,7 +1118,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   width: calc(100% - 40px);
   padding: 10px 20px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.8);
+  background: none;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -1010,6 +1127,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   align-items: flex-start;
   align-content: center;
   gap: 2px;
+  color: white;
 }
 
 .container-main .members-page .carousel .box-carousel-item p {
@@ -1020,7 +1138,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   color: #656565;
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   .container-main .members-page .carousel {
     margin-top: 30px;
   }
@@ -1031,7 +1149,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 /* ################################################### */
 
 .container-main .gallery-page {
+  padding-top: 150px;
+
   background-color: var(--blue-darken);
+  color: white;
 }
 
 .container-main .gallery-page::before,
@@ -1043,6 +1164,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   height: 100%;
   background-color: var(--blue-darken);
   z-index: 1;
+  color: white;
 }
 
 .container-main .gallery-page::before {
@@ -1079,7 +1201,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   width: calc(100% + 80px);
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   .container-main .contact-page svg.bottom-svg-contact-page {
     bottom: -20px;
   }
@@ -1171,7 +1293,7 @@ footer .legal-terms-footer .links-footer .lang-container {
 }
 
 footer .legal-terms-footer .links-footer .lang-container a {
-  white-space : nowrap;
+  white-space: nowrap;
   text-align: left;
 }
 
@@ -1185,7 +1307,7 @@ footer .legal-terms-footer .links-footer a {
   cursor: pointer;
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   footer {
     padding: 60px 0;
   }
