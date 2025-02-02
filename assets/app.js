@@ -16,6 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
+    const menuIcon = document.getElementById("menu-icon");
+    const navLinks = document.querySelectorAll("#navbarMedias a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            if (menuIcon.checked) {
+                menuIcon.checked = false;
+            }
+        });
+    });
+
     const updateLanguageDisplay = (lang) => {
         const windowWidth = window.innerWidth;
         const textContainers = document.querySelectorAll('.lang-container');
