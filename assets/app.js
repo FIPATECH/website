@@ -136,6 +136,33 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 16);
     };
 
+    const targetDate = new Date("2025-05-28T00:00:00");
+
+    function updateCountdown() {
+        const now = new Date();
+        const timeDiff = targetDate - now;
+
+        if (timeDiff <= 0) {
+            document.getElementById("decompte-jours").textContent = "0";
+            document.getElementById("decompte-heures").textContent = "0";
+            document.getElementById("decompte-minutes").textContent = "0";
+            document.getElementById("decompte-secondes").textContent = "0";
+            return;
+        }
+
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        document.getElementById("decompte-jours").textContent = days;
+        document.getElementById("decompte-heures").textContent = hours;
+        document.getElementById("decompte-minutes").textContent = minutes;
+        document.getElementById("decompte-secondes").textContent = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
     startCarousel();
     updateNavbar();
     initLanguageSwitcher();
