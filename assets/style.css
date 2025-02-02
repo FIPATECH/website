@@ -1234,6 +1234,16 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   z-index: 2;
 }
 
+@media only screen and (max-width:767px) {
+  .container-main .gallery-page .desc-section {
+    text-align: center;
+  }
+  .container-main .gallery-page a {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
 /* ################################################### */
 /* ----------------- CONTACT SECTION ----------------- */
 /* ################################################### */
@@ -1361,6 +1371,7 @@ footer .legal-terms-footer .links-footer a {
 @media only screen and (max-width:767px) {
   footer {
     padding: 60px 0;
+    align-items: center;
   }
   footer .legal-terms-footer {
     flex-direction: column;
@@ -1371,8 +1382,9 @@ footer .legal-terms-footer .links-footer a {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    display: none;
   }
-  footer .legal-terms-footer .credits-footer {
+  /* footer .legal-terms-footer .credits-footer {
     margin-right: auto;
-  }
+  } */
 }
