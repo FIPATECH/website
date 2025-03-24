@@ -46,10 +46,10 @@ Vous souhaitez contribuer à la création du site internet ?
 Une fois les droits récupérés, suivez l'installation puis ouvrez un terminal et entrez les commandes suivantes :
 
 ```sh
-git switch dev
+git switch develop
 ```
 
-> Note: Merci de développer sur la branche `dev` ou de créer une branche `dev-{prénom}`
+> Note: Merci de développer sur une branche dont la branche mère est `develop` puis de faire une pull request sur `develop`
 
 ## Nous contacter
 
