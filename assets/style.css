@@ -702,9 +702,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 .container-main .landing-page .hero-section .cta-button-secondary {
   border-radius: 15px;
   font-size: 19px;
-  padding: 8px 20px;
   cursor: pointer;
   transition: .3s all ease-in-out;
+  flex: 0 0 200px;
+  height: 50px;
 }
 
 .container-main .landing-page .hero-section .cta-button {
@@ -713,18 +714,22 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .landing-page .hero-section .cta-button-secondary {
-  background-color: #ffffff00;
-  border: 1px solid var(--blue-darken);
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
 .container-main .landing-page .hero-section .buttons-cta .lang-container {
   height: auto;
 }
 
-.container-main .landing-page .hero-section .cta-button a,
-.container-main .landing-page .hero-section .cta-button-secondary a {
+.container-main .landing-page .hero-section .cta-button a {
   color: #fff;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.container-main .landing-page .hero-section .cta-button-secondary a {
+  color: var(--blue-darken);
+  transition: 0.3s all ease-in-out;
 }
 
 .container-main .landing-page .hero-section .cta-button:hover,
@@ -738,8 +743,8 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .landing-page .hero-section .cta-button-secondary:hover {
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: var(--blue-darken);
+  border: 1px solid var(--blue-darken);
 }
 
 .container-main .landing-page .hero-section .cta-button:hover a {
@@ -747,7 +752,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .landing-page .hero-section .cta-button-secondary:hover a {
-  color: var(--blue-darken);
+  color: #fff;
 }
 
 .container-main .landing-page .hero-section .banner-sponsors {

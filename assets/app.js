@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const updateTitle = (lang) => {
         const path = window.location.pathname + window.location.hash;
-        let title = 'FIPATech';
+        let title = 'FIPATECH';
     
         const titles = {
             'en': {
