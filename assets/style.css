@@ -602,7 +602,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   height: 100vh;
   top: 0;
   position: absolute;
-  background: url("../src/background.png") no-repeat center center fixed;
+  background: url("/assets/src/background.png") no-repeat center center fixed;
   background-size: cover;
 }
 
