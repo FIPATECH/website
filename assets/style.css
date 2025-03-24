@@ -1370,6 +1370,8 @@ footer .top-footer {
   align-items: center;
   align-content: center;
   gap: 10px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 footer .top-footer img {
