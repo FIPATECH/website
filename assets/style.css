@@ -1136,12 +1136,12 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   object-fit: cover;
   object-position: 40%;
   border-radius: 20px;
-  filter: grayscale(1) blur(10px);
+  filter: grayscale(1);
   transition: .2s all ease-in-out;
 }
 
 .container-main .members-page .carousel .carousel-item img:hover {
-  filter: grayscale(0) blur(10px);
+  filter: grayscale(0);
   transform: scale(1.1);
 }
 
@@ -1181,13 +1181,13 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 /* ----------------- GALLERY SECTION ----------------- */
 /* ################################################### */
 
-.container-main .gallery-page {
+.container-main .contact-page {
   background-color: var(--blue-darken);
   min-height: auto;
 }
 
-.container-main .gallery-page::before,
-.container-main .gallery-page::after {
+.container-main .contact-page::before,
+.container-main .contact-page::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1197,15 +1197,15 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   z-index: 1;
 }
 
-.container-main .gallery-page::before {
+.container-main .contact-page::before {
   left: -40px;
 }
 
-.container-main .gallery-page::after {
+.container-main .contact-page::after {
   right: -40px;
 }
 
-.container-main .gallery-page svg {
+.container-main .contact-page svg {
   position: absolute;
   top: 0;
   left: -40px;
@@ -1213,21 +1213,21 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   z-index: 2;
 }
 
-.container-main .gallery-page .category-section::after {
+.container-main .contact-page .category-section::after {
   background-color: white;
 }
 
-.container-main .gallery-page .category-section {
+.container-main .contact-page .category-section {
   margin-top: 90px;
   color: white;
 }
 
-.container-main .gallery-page .desc-section {
+.container-main .contact-page .desc-section {
   color: #fff;
   margin-top: 10px;
 }
 
-.container-main .gallery-page a {
+.container-main .contact-page a {
   color: white;
   margin-top: 10px;
   font-size: 30px;
@@ -1235,27 +1235,27 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 @media only screen and (max-width:767px) {
-  .container-main .gallery-page .desc-section {
+  .container-main .contact-page .desc-section {
     text-align: center;
   }
-  .container-main .gallery-page a {
+  .container-main .contact-page a {
     text-align: center;
     font-size: 25px;
   }
 }
 
 /* ################################################### */
-/* ----------------- CONTACT SECTION ----------------- */
+/* ----------------- SPONSORS SECTION ----------------- */
 /* ################################################### */
 
-.container-main .contact-page svg.top-svg-contact-page {
+.container-main .sponsors-page svg.top-svg-sponsors-page {
   position: absolute;
   top: -1px;
   left: -40px;
   width: calc(100% + 80px);
 }
 
-.container-main .contact-page svg.bottom-svg-contact-page {
+.container-main .sponsors-page svg.bottom-svg-sponsors-page {
   position: absolute;
   bottom: -75px;
   left: -40px;
@@ -1263,7 +1263,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 @media only screen and (max-width:767px) {
-  .container-main .contact-page svg.bottom-svg-contact-page {
+  .container-main .sponsors-page svg.bottom-svg-sponsors-page {
     bottom: -20px;
   }
 }
