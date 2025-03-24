@@ -1,10 +1,10 @@
-# FIPATech
+# FIPATECH WEBSITE
 
-Site internet de FIPATech, une équipe de robotique de l'ENSTA Bretagne composée d'étudiants par alternance.
+Site internet de FIPATECH, l'équipe de robotique des apprentis ingénieurs de l'ENSTA Bretagne.
 
 ## Lien du site internet
 
-[FIPATech -- ENSTA Bretagne](https://www.ensta-bretagne.fr/fipatech)
+[FIPATECH -- ENSTA Bretagne](https://www.ensta-bretagne.fr/fipatech)
 
 ## Fonctionnalités
 
@@ -16,9 +16,9 @@ Site internet de FIPATech, une équipe de robotique de l'ENSTA Bretagne composé
 
 > Note: En cours de développement
 
-## Tech
+## TECH
 
-FIPATech utilise ces "langages" pour fonctionner :
+FIPATECH website utilise ces "langages" pour fonctionner :
 
 - [HTML] - Hypertext Markup Language
 - [CSS] - Cascading Style Sheets
@@ -34,7 +34,7 @@ cd website
 
 ## Plugins
 
-Le site de FIPATech utilise actuellement ces plugins.
+Le site de FIPATECH utilise actuellement ces plugins.
 | Plugins | Documentations |
 | ------ | ------ |
 | GitHub | [GitHub] -- _GitHub Docs_ |
@@ -55,11 +55,11 @@ git switch develop
 
 Pour toute question, n'hésitez surtout pas à nous contacter
 
-| Rôle        | E-Mail                                                                                 |
-| ----------- | -------------------------------------------------------------------------------------- |
-| Président   | [jocelyn.deleuil@ensta-bretagne.org](jocelyn.deleuil@ensta-bretagne.org)               |
-| Développeur | [shems-eddine.seddougui@ensta-bretagne.org](shems-eddine.seddougui@ensta-bretagne.org) |
-| Contact     | [club-fipatech@ensta-bretagne.org](club-fipatech@ensta-bretagne.org)                   |
+| Rôle        | E-Mail                                                                               |
+| ----------- | ------------------------------------------------------------------------------------ |
+| Capitaine   | [jocelyn.deleuil@ensta.fr](jocelyn.deleuil@ensta.fr)                                 |
+| Développeur | [shems-eddine.seddougui@ensta-bretagne.fr](shems-eddine.seddougui@ensta-bretagne.fr) |
+| Contact     | [club-fipatech@ensta-bretagne.fr](club-fipatech@ensta-bretagne.fr)                   |
 
 ## Licence
 
