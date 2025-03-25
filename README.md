@@ -6,6 +6,10 @@ Site internet de FIPATECH, l'équipe de robotique des apprentis ingénieurs de l
 
 [FIPATECH — ENSTA Bretagne](https://www.ensta-bretagne.fr/fipatech)
 
+## Maquette du site internet
+
+![image](https://github.com/user-attachments/assets/1eb7d610-5696-48fc-8fef-131efa98c074)
+
 ## Fonctionnalités
 
 - Présentation du projet
