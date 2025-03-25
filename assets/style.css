@@ -602,7 +602,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   height: 100vh;
   top: 0;
   position: absolute;
-  background: url("/assets/src/background.png") no-repeat center center fixed;
+  background: url("src/background.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -1252,7 +1252,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .sponsors-page .sponsors .sponsor-child#become-sponsor {
-  background-image: url('/assets/src/sponsors/sponsor.png');
+  background-image: url('src/sponsors/sponsor.png');
   background-position: 50% 50%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
