@@ -628,6 +628,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   padding: 5px 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: 90%;
 }
 
 .container-main .landing-page .hero-section .headline-hero-section {
@@ -807,6 +808,12 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   .container-main .landing-page .hero-section .desc-hero-section {
     width: 90%;
   }
+
+  .container-main .landing-page .hero-section .cta-button,
+  .container-main .landing-page .hero-section .cta-button-secondary {
+    flex: none;
+  }
+
   .container-main .landing-page .hero-section .buttons-cta {
     flex-direction: column;
     width: 90%;
@@ -1259,7 +1266,16 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 
 @media only screen and (max-width:767px) {
   .container-main .sponsors-page .sponsors {
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .container-main .sponsors-page .sponsors {
+    gap: 30px;
+  }
+  .container-main .sponsors-page .sponsors .sponsor-child {
+    height: 100px;
+  }
+  .container-main .sponsors-page .sponsors .sponsor-child#become-sponsor a {
+    font-size: 14px;
   }
 }
 

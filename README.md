@@ -4,15 +4,15 @@ Site internet de FIPATECH, l'équipe de robotique des apprentis ingénieurs de l
 
 ## Lien du site internet
 
-[FIPATECH -- ENSTA Bretagne](https://www.ensta-bretagne.fr/fipatech)
+[FIPATECH — ENSTA Bretagne](https://www.ensta-bretagne.fr/fipatech)
 
 ## Fonctionnalités
 
 - Présentation du projet
 - Présentation des membres
 - Présentation des sponsors
-- Galerie d'images/vidéos
-- Formulaire de contact
+- Galerie d'images/vidéos _(en cours)_
+- Formulaire de contact _(en cours)_
 
 > Note: En cours de développement
 
@@ -30,6 +30,7 @@ FIPATECH website utilise ces "langages" pour fonctionner :
 mkdir fipatech
 git clone git@github.com:FIPATECH/website.git
 cd website
+git switch develop
 ```
 
 ## Plugins
@@ -37,8 +38,8 @@ cd website
 Le site de FIPATECH utilise actuellement ces plugins.
 | Plugins | Documentations |
 | ------ | ------ |
-| GitHub | [GitHub] -- _GitHub Docs_ |
-| Google Analytics | [GoogleAnalytics] -- _GoogleDev Docs_ |
+| GitHub | [GitHub] — _GitHub Docs_ |
+| Google Analytics | [GoogleAnalytics] — _GoogleDev Docs_ |
 
 ## Développement
 
@@ -55,15 +56,15 @@ git switch develop
 
 Pour toute question, n'hésitez surtout pas à nous contacter
 
-| Rôle        | E-Mail                                                                               |
-| ----------- | ------------------------------------------------------------------------------------ |
-| Capitaine   | [jocelyn.deleuil@ensta.fr](jocelyn.deleuil@ensta.fr)                                 |
-| Développeur | [shems-eddine.seddougui@ensta-bretagne.fr](shems-eddine.seddougui@ensta-bretagne.fr) |
-| Contact     | [club-fipatech@ensta-bretagne.fr](club-fipatech@ensta-bretagne.fr)                   |
+| Rôle        | E-Mail                                                             |
+| ----------- | ------------------------------------------------------------------ |
+| Capitaine   | [jocelyn.deleuil@ensta.fr](jocelyn.deleuil@ensta.fr)               |
+| Développeur | [shems-eddine.seddougui@ensta.fr](shems-eddine.seddougui@ensta.fr) |
+| Contact     | [club-fipatech@ensta-bretagne.fr](club-fipatech@ensta-bretagne.fr) |
 
 ## Licence
 
-Shems SEDDOUGUI -- FIPA 27
+[Shems SEDDOUGUI](shems-eddine.seddougui@ensta.fr) — FIPA 27
 
 [HTML]: https://developer.mozilla.org/fr/docs/Web/HTML
 [CSS]: https://developer.mozilla.org/fr/docs/Web/CSS
