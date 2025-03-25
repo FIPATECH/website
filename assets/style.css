@@ -597,12 +597,12 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 20px ;
+  gap: 20px;
   width: 100%;
   height: 100vh;
   top: 0;
   position: absolute;
-  background: url("../src/background.png") no-repeat center center fixed;
+  background: url("/assets/src/background.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -628,6 +628,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   padding: 5px 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: 90%;
 }
 
 .container-main .landing-page .hero-section .headline-hero-section {
@@ -702,9 +703,10 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 .container-main .landing-page .hero-section .cta-button-secondary {
   border-radius: 15px;
   font-size: 19px;
-  padding: 8px 20px;
   cursor: pointer;
   transition: .3s all ease-in-out;
+  flex: 0 0 200px;
+  height: 50px;
 }
 
 .container-main .landing-page .hero-section .cta-button {
@@ -713,18 +715,22 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .landing-page .hero-section .cta-button-secondary {
-  background-color: #ffffff00;
-  border: 1px solid var(--blue-darken);
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
 .container-main .landing-page .hero-section .buttons-cta .lang-container {
   height: auto;
 }
 
-.container-main .landing-page .hero-section .cta-button a,
-.container-main .landing-page .hero-section .cta-button-secondary a {
+.container-main .landing-page .hero-section .cta-button a {
   color: #fff;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.container-main .landing-page .hero-section .cta-button-secondary a {
+  color: var(--blue-darken);
+  transition: 0.3s all ease-in-out;
 }
 
 .container-main .landing-page .hero-section .cta-button:hover,
@@ -738,8 +744,8 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .landing-page .hero-section .cta-button-secondary:hover {
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: var(--blue-darken);
+  border: 1px solid var(--blue-darken);
 }
 
 .container-main .landing-page .hero-section .cta-button:hover a {
@@ -747,7 +753,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 .container-main .landing-page .hero-section .cta-button-secondary:hover a {
-  color: var(--blue-darken);
+  color: #fff;
 }
 
 .container-main .landing-page .hero-section .banner-sponsors {
@@ -771,7 +777,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   position: absolute;
   content: "";
   display: block;
-  width: 120%;
+  width: 105%;
   height: 100%;
   transform: skew(-30deg);
   border-radius: 20px 0 0 0;
@@ -802,12 +808,24 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   .container-main .landing-page .hero-section .desc-hero-section {
     width: 90%;
   }
+
+  .container-main .landing-page .hero-section .cta-button,
+  .container-main .landing-page .hero-section .cta-button-secondary {
+    flex: none;
+  }
+
   .container-main .landing-page .hero-section .buttons-cta {
     flex-direction: column;
     width: 90%;
   }
   .container-main .landing-page .hero-section .buttons-cta > * {
     width: 100%;
+  }
+  .banner-sponsors > * {
+    display: none;
+  }
+  .container-main .landing-page .hero-section .banner-sponsors::before {
+    display: none;
   }
 }
 
@@ -817,7 +835,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 
 .container-main .project-page,
 .container-main .members-page,
-.container-main .gallery-page,
+.container-main .sponsors-page,
 .container-main .contact-page {
   width: 100%;
   min-height: 100vh;
@@ -831,6 +849,15 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   gap: 5px;
   position: relative;
   padding: 30px 0;
+}
+
+@media only screen and (max-width:767px) {
+  .container-main .project-page,
+  .container-main .members-page,
+  .container-main .sponsors-page,
+  .container-main .contact-page {
+    min-height: auto;
+  }
 }
 
 /* ################################################### */
@@ -878,7 +905,7 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 @media only screen and (max-width:767px) {
   .container-main .headline-section {
     font-size: 24px;
-}
+  }
   .container-main .desc-section {
     font-size: 14px;
     text-align: justify;
@@ -1024,7 +1051,6 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   color: #000;
 }
 
-
 .container-main .project-page .project-section .project-bloc4 {
   grid-area: 1 / 5 / 5 / 7;
   display: flex;
@@ -1136,12 +1162,12 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   object-fit: cover;
   object-position: 40%;
   border-radius: 20px;
-  filter: grayscale(1) blur(10px);
+  filter: grayscale(1);
   transition: .2s all ease-in-out;
 }
 
 .container-main .members-page .carousel .carousel-item img:hover {
-  filter: grayscale(0) blur(10px);
+  filter: grayscale(0);
   transform: scale(1.1);
 }
 
@@ -1173,21 +1199,97 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 
 @media only screen and (max-width:767px) {
   .container-main .members-page .carousel {
+    height: 400px;
     margin-top: 30px;
   }
 }
 
 /* ################################################### */
-/* ----------------- GALLERY SECTION ----------------- */
+/* ----------------- SPONSORS SECTION ----------------- */
 /* ################################################### */
 
-.container-main .gallery-page {
+.container-main .sponsors-page {
+  min-height: auto;
+}
+
+.container-main .sponsors-page .sponsors {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 50px;
+}
+
+.container-main .sponsors-page .sponsors .sponsor-child {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 200px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 30% 70% 23% 77% / 60% 30% 70% 40%;
+}
+
+.container-main .sponsors-page .sponsors .sponsor-child,
+.container-main .sponsors-page .sponsors .sponsor-child > * {
+  transition: .2s all ease-in-out;
+}
+
+.container-main .sponsors-page .sponsors .sponsor-child:hover > * {
+  transform: scale(1.1);
+}
+
+.container-main .sponsors-page .sponsors .sponsor-child img {
+  width: 300%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.container-main .sponsors-page .sponsors .sponsor-child#become-sponsor {
+  background-image: url('/assets/src/sponsors/sponsor.png');
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.container-main .sponsors-page .sponsors .sponsor-child#become-sponsor a {
+  color: #fff;
+  font-size: 22px;
+}
+
+@media only screen and (max-width:767px) {
+  .container-main .sponsors-page .sponsors {
+    flex-wrap: wrap;
+  }
+  .container-main .sponsors-page .sponsors {
+    gap: 30px;
+  }
+  .container-main .sponsors-page .sponsors .sponsor-child {
+    height: 100px;
+  }
+  .container-main .sponsors-page .sponsors .sponsor-child#become-sponsor a {
+    font-size: 14px;
+  }
+}
+
+/* ################################################### */
+/* ----------------- CONTACT SECTION ----------------- */
+/* ################################################### */
+
+.container-main .contact-page {
   background-color: var(--blue-darken);
   min-height: auto;
 }
 
-.container-main .gallery-page::before,
-.container-main .gallery-page::after {
+.container-main .contact-page::before,
+.container-main .contact-page::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1197,15 +1299,15 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   z-index: 1;
 }
 
-.container-main .gallery-page::before {
+.container-main .contact-page::before {
   left: -40px;
 }
 
-.container-main .gallery-page::after {
+.container-main .contact-page::after {
   right: -40px;
 }
 
-.container-main .gallery-page svg {
+.container-main .contact-page svg {
   position: absolute;
   top: 0;
   left: -40px;
@@ -1213,21 +1315,21 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
   z-index: 2;
 }
 
-.container-main .gallery-page .category-section::after {
+.container-main .contact-page .category-section::after {
   background-color: white;
 }
 
-.container-main .gallery-page .category-section {
+.container-main .contact-page .category-section {
   margin-top: 90px;
   color: white;
 }
 
-.container-main .gallery-page .desc-section {
+.container-main .contact-page .desc-section {
   color: #fff;
   margin-top: 10px;
 }
 
-.container-main .gallery-page a {
+.container-main .contact-page a {
   color: white;
   margin-top: 10px;
   font-size: 30px;
@@ -1235,36 +1337,12 @@ header.menu-responsive .menu-icon:checked ~ nav.menu-responsive ul li {
 }
 
 @media only screen and (max-width:767px) {
-  .container-main .gallery-page .desc-section {
+  .container-main .contact-page .desc-section {
     text-align: center;
   }
-  .container-main .gallery-page a {
+  .container-main .contact-page a {
     text-align: center;
     font-size: 25px;
-  }
-}
-
-/* ################################################### */
-/* ----------------- CONTACT SECTION ----------------- */
-/* ################################################### */
-
-.container-main .contact-page svg.top-svg-contact-page {
-  position: absolute;
-  top: -1px;
-  left: -40px;
-  width: calc(100% + 80px);
-}
-
-.container-main .contact-page svg.bottom-svg-contact-page {
-  position: absolute;
-  bottom: -75px;
-  left: -40px;
-  width: calc(100% + 80px);
-}
-
-@media only screen and (max-width:767px) {
-  .container-main .contact-page svg.bottom-svg-contact-page {
-    bottom: -20px;
   }
 }
 
@@ -1318,6 +1396,8 @@ footer .top-footer {
   align-items: center;
   align-content: center;
   gap: 10px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 footer .top-footer img {
@@ -1354,7 +1434,7 @@ footer .legal-terms-footer .links-footer .lang-container {
 }
 
 footer .legal-terms-footer .links-footer .lang-container a {
-  white-space : nowrap;
+  white-space: nowrap;
   text-align: left;
 }
 
