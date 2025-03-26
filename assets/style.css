@@ -1384,27 +1384,57 @@ footer::after {
   right: -40px;
 }
 
-footer p {
+footer .links-cta-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+footer .links-cta-footer .child-link-cta-footer img {
+  width: 20px;
+}
+
+footer .links-cta-footer .child-link-cta-footer img#github-icon {
+  scale: 1.2;
+}
+
+footer .links-cta-footer .child-link-cta-footer img#linkedin-icon {
+  border-radius: 3px;
+}
+
+footer .links-cta-footer .child-link-cta-footer p {
   color: #fff;
 }
 
-footer .top-footer {
+footer .links-cta-footer .child-link-cta-footer:last-child,
+footer .links-cta-footer .child-link-cta-footer .top-footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 10px;
   cursor: pointer;
   z-index: 2;
 }
 
-footer .top-footer img {
+footer .links-cta-footer .child-link-cta-footer:last-child {
+  gap: 15px;
+}
+
+footer .links-cta-footer .child-link-cta-footer .top-footer {
+  gap: 10px;
+}
+
+footer .links-cta-footer .child-link-cta-footer .top-footer img {
   width: 40px;
 }
 
-footer .top-footer p {
+footer .links-cta-footer .child-link-cta-footer .top-footer p {
   font-size: 18px;
 }
 
@@ -1452,6 +1482,10 @@ footer .legal-terms-footer .links-footer a {
   footer {
     padding: 60px 0;
     align-items: center;
+  }
+  footer .links-cta-footer {
+    flex-direction: column;
+    gap: 20px;
   }
   footer .legal-terms-footer {
     flex-direction: column;
