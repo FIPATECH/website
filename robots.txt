@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fipatech.github.io/website/sitemap.xml
+Sitemap: https://fipatech.fr/sitemap.xml
 
 Crawl-delay: 10
 

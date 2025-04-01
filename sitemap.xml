@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fipatech.github.io/website/</loc>
+    <loc>https://fipatech.fr</loc>
     <lastmod>2025-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://fipatech.github.io/website/#project</loc>
+	<loc>https://fipatech.fr/#project</loc>
     <lastmod>2025-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://fipatech.github.io/website/#members</loc>
+    <loc>https://fipatech.fr/#members</loc>
     <lastmod>2025-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://fipatech.github.io/website/#sponsors</loc>
+    <loc>https://fipatech.fr/#sponsors</loc>
     <lastmod>2025-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://fipatech.github.io/website/#contact</loc>
+    <loc>https://fipatech.fr/#contact</loc>
     <lastmod>2025-03-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
