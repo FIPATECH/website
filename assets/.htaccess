@@ -1,4 +1,4 @@
-<Directory "/var/www/html/assets">
+<!-- <Directory "/var/www/html/assets">
     Order Deny,Allow
     Deny from all
 </Directory>
@@ -8,4 +8,4 @@
     Allow from all
 </FilesMatch>
 
-Options -Indexes
+Options -Indexes -->
