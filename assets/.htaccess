@@ -1,0 +1,4 @@
+<Directory "/var/www/html/assets">
+    Order Deny,Allow
+    Deny from all
+</Directory>
